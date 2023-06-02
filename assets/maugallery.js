@@ -121,7 +121,7 @@
     },
     prevImage() {
       let activeImage = null;
-      $("img.gallery-item").each(function() {
+      $(".lightboxImage.img-fluid").each(function() {
         if ($(this).attr("src") === $(".lightboxImage").attr("src")) {
           activeImage = $(this);
         }
@@ -147,6 +147,20 @@
       }
       let index = 0,
         next = null;
+    
+      $(imagesCollection).each(function(i) {
+        if ($(this).attr("src") === activeImage.attr("src")) {
+          index = i - 1;
+          if (index < 0) {
+            index = imagesCollection.length - 1;
+          }
+          return false; 
+        }
+      });
+      next = imagesCollection[index];
+      $(".lightboxImage").attr("src", $(next).attr("src"));
+    
+      
 
       $(imagesCollection).each(function(i) {
         if ($(activeImage).attr("src") === $(this).attr("src")) {
@@ -160,7 +174,7 @@
     },
     nextImage() {
       let activeImage = null;
-      $("img.gallery-item").each(function() {
+      $(".lightboxImage.img-fluid").each(function() {
         if ($(this).attr("src") === $(".lightboxImage").attr("src")) {
           activeImage = $(this);
         }
@@ -186,6 +200,18 @@
       }
       let index = 0,
         next = null;
+    
+      $(imagesCollection).each(function(i) {
+        if ($(this).attr("src") === activeImage.attr("src")) {
+          index = i + 1;
+          if (index >= imagesCollection.length) {
+            index = 0;
+          }
+          return false; // exit the loop
+        }
+      });
+      next = imagesCollection[index];
+      $(".lightboxImage").attr("src", $(next).attr("src"));
 
       $(imagesCollection).each(function(i) {
         if ($(activeImage).attr("src") === $(this).attr("src")) {
@@ -217,7 +243,8 @@
                     </div>
                 </div>
             </div>`);
-    },
+          },
+
     showItemTags(gallery, position, tags) {
       var tagItems =
         '<li class="nav-item"><span class="nav-link active active-tag"  data-images-toggle="all">Tous</span></li>';

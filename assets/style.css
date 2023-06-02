@@ -91,7 +91,7 @@ body {
 }
 
 #gallery {
-	/*	min-height: 100vh; */
+		min-height: 100vh; 
 }
 .title{
 	text-align: center;
@@ -101,7 +101,7 @@ body {
 	justify-content: center;
 }
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
-	color: #fff;
+	color: white;
 	background-color: #BEB45A;
 	border-radius:0 ;
 }
