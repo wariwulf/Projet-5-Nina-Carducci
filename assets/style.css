@@ -40,6 +40,7 @@ body {
 
 .social-link img {
 	width: 20px;
+	height: 20px;
 }
 
 #about {
@@ -59,6 +60,12 @@ body {
 	bottom: 0;
 	left: 0;
 	z-index: -1;
+}
+
+.nina-img {
+	object-fit: cover;
+	height: 100%;
+	width: 100%;
 }
 
 .picture {
