@@ -47,6 +47,7 @@ $(document).ready(function() {
         .attr("src", image.src)
         .attr("loading", "lazy")
         .attr("decoding", "async")
+        .attr("cache-control", "max-age=604800")
         .attr("alt", "")
         .css("max-width", "100%");
       $gallery.append($img);
