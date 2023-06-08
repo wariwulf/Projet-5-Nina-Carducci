@@ -1,0 +1,6 @@
+defaults:
+  - scope:
+      path: ""
+      type: "max-age=31536000"
+    values:
+      cache-control: "public, immutable"
