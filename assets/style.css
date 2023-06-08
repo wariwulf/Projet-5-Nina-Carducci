@@ -51,15 +51,19 @@ body {
 	position: relative;
 }
 
-.picture.left::before {
-	content: ' ';
+.decoration-left {
 	background-color: #E5975F;
 	width: 374px;
-	height: 329px;
+	height: 300px;
 	position: absolute;
-	bottom: 0;
 	left: 0;
-	z-index: -1;
+	bottom: 0;
+}
+
+.picture.left {
+	background-color: #E5975F;
+	width: 374px;
+	height: 600px;
 }
 
 .nina-img {
