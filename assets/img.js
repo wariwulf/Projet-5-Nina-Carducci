@@ -54,8 +54,6 @@ $(document).ready(function() {
         .addClass("gallery-item")
         .attr("data-gallery-tag", image.tag)
         .attr("src", image.src)
-        .attr("loading", "lazy")
-        .attr("decoding", "async")
         .attr("cache-control", "max-age=604800")
         .attr("alt", image.alt)
         .css("max-width", "100%");
