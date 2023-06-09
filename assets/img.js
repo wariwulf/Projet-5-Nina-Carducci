@@ -43,7 +43,7 @@ $(document).ready(function() {
       {
         tag: "Entreprises",
         src: "./assets/images/gallery/entreprise/mateus-campos-felipe-Fsgzm8N0hIY-unsplash.webp",
-        alt: "Une femme d'affaire tout sourire parlant à un collègue dérrière son ordinateur"
+        alt: "Une femme d'affaire tout sourire parlant à un collègue dérrière son"
       }
     ];
   
